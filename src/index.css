@@ -5,6 +5,13 @@ body {
   line-height: 1.5;
   background-color: #1B1A18;
   font-family: 'Inika', cursive;
+  font-weight: 400;
+  font-size: 10px;
+  color: #FAFAFA;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 h1,
@@ -17,11 +24,11 @@ p {
   margin: 0;
 }
 
-ul,
+/* ul,
 ol {
   margin: 0;
   padding: 0;
-}
+} */
 
 img {
   display: block;
