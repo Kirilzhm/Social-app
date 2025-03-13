@@ -10,6 +10,7 @@ const ChatPage = lazy(() => import('../pages/ChatPage/ChatPage'));
 const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const SettingsPage = lazy(() => import('../pages/SettingsPage/SettingsPage'));
+const AboutUs = lazy(() => import('../pages/AboutUsPage/AboutUsPage'));
 
 function App() {
 
@@ -36,6 +37,10 @@ function App() {
         <Route 
           path="settings" 
           element={<PrivateRoute component={<SettingsPage />} />} />
+        <Route 
+        path="aboutUs"
+        element={<PrivateRoute component={<AboutUs />} />}>
+        </Route>
       </Routes>
   </>;
 }
