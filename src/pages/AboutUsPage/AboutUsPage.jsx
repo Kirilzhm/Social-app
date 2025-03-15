@@ -11,6 +11,7 @@ const AboutUs = () => {
     return (
        <div>
             <Header name={text}/>
+            <div className="flex justify-center">
             <div className="mt-10 mr-[25px] ml-[25px]">
                 <p className={`${textStyle}`}>Welcome to <span className="text-[12px]/[135%] font-bold ">FriendsMe</span> – the messaging app that brings people closer. We created FriendsMe to make communication fast, secure, and enjoyable, whether you're chatting one-on-one or connecting with a group of friends.</p>
                 <div className="mt-5">
@@ -30,6 +31,7 @@ const AboutUs = () => {
                         <h2 className="text-[32px] font-bold underline">Find friends now</h2>
                     </Link>
                 </div>
+            </div>
             </div>
        </div>
     )
