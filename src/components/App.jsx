@@ -11,6 +11,7 @@ const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const SettingsPage = lazy(() => import('../pages/SettingsPage/SettingsPage'));
 const AboutUs = lazy(() => import('../pages/AboutUsPage/AboutUsPage'));
+const Contacts = lazy(() => import('../pages/ContactsPage/ContactsPage'))
 
 function App() {
 
@@ -40,6 +41,10 @@ function App() {
         <Route 
         path="aboutUs"
         element={<PrivateRoute component={<AboutUs />} />}>
+        </Route>
+        <Route 
+        path="contacts"
+        element={<PrivateRoute component={<Contacts />} />}>
         </Route>
       </Routes>
   </>;
