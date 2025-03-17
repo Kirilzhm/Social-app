@@ -1,9 +1,10 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 // import {useSelector} from 'react-redux';
 import { settingStyleBtn, settingStyleList } from '../../js/settingStyle';
 
 const SettingsPage = () => {
   // const loading = useSelector();
+  const navigate = useNavigate();
   const loading = false;
   return (
     <div className="pt-[15px] pb-[30px] mx-[25px]">
@@ -12,11 +13,11 @@ const SettingsPage = () => {
       ) : (
         <>
           <div className="h-12.5 w-full flex justify-between items-center bg-[#1A1B1A] mx-auto">
-            <NavLink className={settingStyleList()} to="/">
+            <button className={settingStyleList()} onClick={()=>navigate(-1)}>
               <svg className={settingStyleBtn()}>
                 <use href="./icons.svg#icon-close-svgrepo-com-1"></use>
               </svg>
-            </NavLink>
+            </button>
             <h2 className="text-[#FAFAFA] font-bold text-base">Settings</h2>
             <NavLink className={settingStyleList()} to="/">
               <svg className={settingStyleBtn()}>
