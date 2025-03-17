@@ -11,6 +11,8 @@ const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const SettingsPage = lazy(() => import('../pages/SettingsPage/SettingsPage'));
 const ProfilePage = lazy(() => import('../pages/ProfilePage/ProfilePage'));
+const AboutUs = lazy(() => import('../pages/AboutUsPage/AboutUsPage'));
+const Contacts = lazy(() => import('../pages/ContactsPage/ContactsPage'))
 
 function App() {
   return (
@@ -43,6 +45,17 @@ function App() {
           path="profile"
           element={<PrivateRoute component={<ProfilePage />} />}
         />
+        <Route 
+          path="settings" 
+          element={<PrivateRoute component={<SettingsPage />} />} />
+        <Route 
+        path="aboutUs"
+        element={<PrivateRoute component={<AboutUs />} />}>
+        </Route>
+        <Route 
+        path="contacts"
+        element={<PrivateRoute component={<Contacts />} />}>
+        </Route>
       </Routes>
     </>
   );

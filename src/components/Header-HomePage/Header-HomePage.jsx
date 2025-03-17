@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Header = () => {
 
     return (
-        <header className="flex items-center justify-between h-[50px] ml-25 mr-25">
+        <header className="flex items-center justify-between h-[50px] ml-[25px] mr-[25px] mt-[25px]">
             <Link to="settings">
                 <svg className="size-[20px]">
                     <use href="/icons.svg#icon-settings"></use>
