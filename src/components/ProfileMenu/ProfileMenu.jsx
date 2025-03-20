@@ -2,13 +2,13 @@ import React from 'react';
 import clsx from 'clsx';
 import { profileStyleBtn, profileStyleSvg } from '../../js/settingStyle';
 
-export const ProfileMenu = ({ isOpen }) => {
+export const ProfileMenu = ({ isOpenMore }) => {
   return (
     <div>
       <ul
         className={clsx(
           'font-bold text-[32px] text-[#090202] flex flex-col w-full bg-[#D9D9D9] py-[15px] px-[10px] rounded-[15px]',
-          { 'gap-[13px]': !isOpen, 'gap-[10px]': isOpen }
+          { 'gap-[13px]': !isOpenMore, 'gap-[10px]': isOpenMore }
         )}
       >
         <li>
