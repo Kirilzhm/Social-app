@@ -14,6 +14,7 @@
   color: #090202;
   border: none;
   outline: none;
+  direction: rtl;
   &::placeholder {
     color: #bbbbbb;
   }
@@ -21,9 +22,11 @@
 .wrapper input:nth-of-type(2) {
   margin-top: 6px;
 }
-.wrapper input:nth-of-type(3),
-.wrapper input:nth-of-type(4),
-.wrapper input:nth-of-type(5) {
+.inputWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.inputWrapper input {
   font-size: 12px;
-
+  text-align: right;
 }
