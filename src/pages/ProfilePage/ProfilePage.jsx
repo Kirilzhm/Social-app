@@ -20,11 +20,13 @@ const ProfilePage = () => {
       return setIsOpenMore(true);
     }
     if (isOpenMore === true) {
+      setIsOpenChange(false);
       return setIsOpenMore(false);
     }
   };
   const handleOnCLickChange = () => {
     if (isOpenChange === false) {
+      setIsOpenMore(false);
       return setIsOpenChange(true);
     }
     if (isOpenChange === true) {
@@ -50,7 +52,7 @@ const ProfilePage = () => {
             </h2>
           </div>
           {isOpenChange ? (
-            <ProfileChange />
+            <ProfileChange handleOnCLickChange={handleOnCLickChange} />
           ) : (
             <div className="max-w-[390px] h-[280px] py-[10px] px-[5px] rounded-xl bg-[rgba(217,217,217,0.5)] mx-[auto] mt-[calc(100vh-375px)]">
               <div
