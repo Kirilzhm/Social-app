@@ -48,6 +48,7 @@ export const ProfileChange = ({ handleOnCLickChange }) => {
     }
 
     alert(JSON.stringify(values, null, 2));
+    handleOnCLickChange();
   };
 
   return (
