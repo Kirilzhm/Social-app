@@ -7,6 +7,7 @@ import * as Yup from 'yup';
 import {
   profileStyleBtn,
   profileStyleSvg,
+  radioRegisterStyleBtn,
   unactiveSvg,
 } from '../../js/settingStyle';
 import { DatePicker } from 'antd';
@@ -41,6 +42,7 @@ const RegisterPage = () => {
   };
   const nameFieldId = useId();
   const surNameFieldId = useId();
+  const sexFieldId = useId();
   const telephoneFieldId = useId();
   const emailFieldId = useId();
   const dateFieldId = useId();
@@ -124,6 +126,43 @@ const RegisterPage = () => {
                       component="div"
                       className="text-red-600 text-xs absolute left-[0%] top-[15%]"
                     />
+                    <div className={css.inputWrapper}>
+                      <label
+                        className="text-[10px] font-normal text-[#090202]"
+                        id="sex"
+                      >
+                        Sex
+                      </label>
+
+                      <div
+                        role="group"
+                        aria-labelledby="sex"
+                        className="inline-flex bg-[#D9D9D9] rounded-full p-[1px] w-fit"
+                      >
+                        <label htmlFor="male">
+                          <Field
+                            type="radio"
+                            name="sex"
+                            value="male"
+                            id="male"
+                            className="sr-only peer/male"
+                          />
+                          <div className={radioRegisterStyleBtn()}>Male</div>
+                        </label>
+
+                        <label htmlFor="female">
+                          <Field
+                            type="radio"
+                            name="sex"
+                            value="female"
+                            id="female"
+                            className="sr-only peer/female"
+                          />
+                          <div className={radioRegisterStyleBtn()}>Female</div>
+                        </label>
+                      </div>
+                    </div>
+
                     <div className={css.inputWrapper}>
                       <label
                         htmlFor={telephoneFieldId}
