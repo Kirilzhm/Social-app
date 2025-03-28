@@ -65,7 +65,7 @@ const RegisterPage = () => {
       ) : (
         <>
           <div
-            className="text-[#090202] h-12.5 w-full flex justify-center items-center bg-[transparent] mx-auto cursor-pointer font-bold"
+            className="text-[#090202] h-12.5 w-full flex justify-center items-center bg-[transparent] mx-auto cursor-pointer font-bold relative"
             onClick={handleIsOpen}
           >
             Register
@@ -73,7 +73,7 @@ const RegisterPage = () => {
           {isOpen && (
             <NavLink
               to="/login"
-              className="text-[#090202] h-12.5 w-full flex justify-center items-center bg-[transparent] mx-auto cursor-pointer hover:bg-[rgba(217,217,217,0.5)] border-y border-[#030104] border-opacity-50"
+              className="text-[#090202] h-12.5 w-full flex justify-center items-center bg-[transparent] mx-auto cursor-pointer hover:bg-[rgba(217,217,217,0.5)] border-y border-[#030104] border-opacity-50 absolute left-1/2 transform -translate-x-1/2"
               onClick={handleIsOpen}
             >
               Login
@@ -228,7 +228,7 @@ const RegisterPage = () => {
                         }}
                       />
                     </div>
-                    <div className="flex flex-row justify-evenly">
+                    <div className="flex flex-row justify-center">
                       <button
                         type="submit"
                         className={clsx(profileStyleBtn(), {
@@ -238,15 +238,6 @@ const RegisterPage = () => {
                       >
                         <svg className={profileStyleSvg()}>
                           <use href="./icons.svg#icon-checkmark"></use>
-                        </svg>
-                      </button>
-                      <button
-                        type="button"
-                        className={profileStyleBtn()}
-                        onClick={() => handleOnCLickChange()}
-                      >
-                        <svg className={profileStyleSvg()}>
-                          <use href="./icons.svg#icon-decline-svgrepo-com-1"></use>
                         </svg>
                       </button>
                     </div>

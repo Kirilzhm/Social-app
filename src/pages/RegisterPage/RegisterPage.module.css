@@ -1,6 +1,6 @@
 .wrapper {
   max-width: 390px;
-  height: 280px;
+  height: fit-content;
   padding: 10px 5px;
   border-radius: 10px;
   background-color: #f6f6f6;
@@ -21,6 +21,7 @@
 }
 .wrapper input:nth-of-type(2) {
   margin-top: 6px;
+  margin-bottom: 15px;
 }
 .inputWrapper {
   display: flex;
@@ -37,6 +38,10 @@
 .inputWrapper label:nth-of-type(2) {
   width: fit-content;
   margin-right: 0;
+}
+
+.inputWrapper:nth-last-of-type(2) {
+  margin-bottom: 16px;
 }
 
 .inputWrapper label {
