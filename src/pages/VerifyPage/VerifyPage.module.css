@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 390px;
+  height: fit-content;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #f6f6f6;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(100vh - 375px);
+  overflow: hidden;
+  color: #090202;
+}

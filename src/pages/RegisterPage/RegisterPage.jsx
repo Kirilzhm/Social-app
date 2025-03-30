@@ -42,7 +42,6 @@ const RegisterPage = () => {
   };
   const nameFieldId = useId();
   const surNameFieldId = useId();
-  const sexFieldId = useId();
   const telephoneFieldId = useId();
   const emailFieldId = useId();
   const dateFieldId = useId();
@@ -96,7 +95,7 @@ const RegisterPage = () => {
 
                 return (
                   <Form className="flex flex-col relative">
-                    <label htmlFor={nameFieldId} className="sr-only ">
+                    <label htmlFor={nameFieldId} className="sr-only">
                       Name or Nickname
                     </label>
                     <Field
