@@ -11,9 +11,12 @@ const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
 const SettingsPage = lazy(() => import('../pages/SettingsPage/SettingsPage'));
 const ProfilePage = lazy(() => import('../pages/ProfilePage/ProfilePage'));
-const PersonProfile = lazy(() => import('../pages/PersonProfile/PersonProfile'));
+const PersonProfile = lazy(() =>
+  import('../pages/PersonProfile/PersonProfile')
+);
 const AboutUs = lazy(() => import('../pages/AboutUsPage/AboutUsPage'));
-const Contacts = lazy(() => import('../pages/ContactsPage/ContactsPage'))
+const Contacts = lazy(() => import('../pages/ContactsPage/ContactsPage'));
+const VerifyPage = lazy(() => import('../pages/VerifyPage/VerifyPage'));
 
 function App() {
   return (
@@ -32,6 +35,11 @@ function App() {
           path="register"
           element={<RestrictedRoute component={<RegisterPage />} />}
         />
+        {/* Верифікація - сторінка вводу коду */}
+        <Route
+          path="/verify"
+          element={<RestrictedRoute component={<VerifyPage />} />}
+        />
         {/* Чат з користувачем */}
         <Route
           path="chat"
@@ -46,21 +54,22 @@ function App() {
           path="profile"
           element={<PrivateRoute component={<ProfilePage />} />}
         />
-        <Route 
-        path="personprofile"
-        element={<PrivateRoute component={<PersonProfile />} />}>
-        </Route>
-        <Route 
-          path="settings" 
-          element={<PrivateRoute component={<SettingsPage />} />} />
-        <Route 
-        path="about"
-        element={<PrivateRoute component={<AboutUs />} />}>
-        </Route>
-        <Route 
-        path="contacts"
-        element={<PrivateRoute component={<Contacts />} />}>
-        </Route>
+        <Route
+          path="personprofile"
+          element={<PrivateRoute component={<PersonProfile />} />}
+        ></Route>
+        <Route
+          path="settings"
+          element={<PrivateRoute component={<SettingsPage />} />}
+        />
+        <Route
+          path="about"
+          element={<PrivateRoute component={<AboutUs />} />}
+        ></Route>
+        <Route
+          path="contacts"
+          element={<PrivateRoute component={<Contacts />} />}
+        ></Route>
       </Routes>
     </>
   );
